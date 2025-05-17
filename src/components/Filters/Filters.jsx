@@ -7,8 +7,9 @@ import s from "./Filters.module.css";
 import { forwardRef } from "react";
 import { NumericFormat } from "react-number-format";
 import Select from "react-select";
-import "./customSelect.css";
-import "./customPrice.css";
+
+import { customPrice } from "./customPrice";
+import { customBrand } from "./customBrand";
 
 const NumericFormatInput = forwardRef((props, ref) => {
   return <NumericFormat {...props} getInputRef={ref} />;
@@ -62,7 +63,7 @@ const Filters = () => {
               options={brandOptions}
               placeholder="Choose a brand"
               isSearchable
-              classNamePrefix="custom-select"
+              styles={customBrand}
               value={
                 brandOptions.find((option) => option.value === field.value) ||
                 null
@@ -86,7 +87,7 @@ const Filters = () => {
                 price ? `To $${option.value}` : option.label
               }
               isSearchable
-              classNamePrefix="custom-price"
+              styles={customPrice}
               value={
                 priceOptions.find((option) => option.value === field.value) ||
                 ""
