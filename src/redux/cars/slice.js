@@ -4,7 +4,6 @@ import { getAllCars, getBrands, getCarById } from "./operations";
 const initialState = {
   brands: [],
   cars: [],
-  items: [],
   page: 1,
   totalPages: null,
   details: null,
@@ -21,6 +20,9 @@ const carsSlice = createSlice({
     },
     setCars(state, action) {
       state.items = action.payload;
+    },
+    resetFilters(state) {
+      state.cars = [];
     },
   },
   extraReducers: (builder) => {
@@ -62,7 +64,6 @@ const carsSlice = createSlice({
 });
 
 export const { nextPage } = carsSlice.actions;
-export const { setCars } = carsSlice.actions;
-export const selectAllCars = (state) => state.cars.items;
+export const { setCars, resetFilters } = carsSlice.actions;
 
 export const carsReducer = carsSlice.reducer;

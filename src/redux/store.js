@@ -11,10 +11,12 @@ import {
 } from "redux-persist";
 // import storage from "redux-persist/lib/storage";
 import { carsReducer } from "./cars/slice";
+import { filterReducer } from "./filter/slice";
 
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
+    filter: filterReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

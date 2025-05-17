@@ -4,3 +4,134 @@
   justify-content: center;
   padding-bottom: 124px;
 }
+
+.filterForm {
+  margin-top: 84px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+}
+
+.brand {
+  background: #f7f7f7;
+  border-radius: 12px;
+  max-width: 204px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  text-align: center;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #101828;
+}
+
+.fromTo1 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border: none;
+  background: #f7f7f7;
+  border-right: 1px solid #dadde1;
+  border-radius: 12px 0 0 12px;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #101828;
+}
+
+.fromTo2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  border-right: 1px solid #dadde1;
+  background: #f7f7f7;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #101828;
+}
+
+button {
+  background: var(--button);
+  font-weight: 600;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: var(--white);
+  border-radius: 12px;
+  padding: 12px 51px;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+input:focus,
+select:focus {
+  border: none; /* При бажанні: або зробити border повністю прозорим */
+  outline: none; /* Прибирає синю обводку браузера */
+  box-shadow: none; /* Якщо використовувався тіньовий ефект */
+}
+
+.option {
+  background-color: #f7f7f7;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #8d929a;
+}
+
+select::-webkit-scrollbar {
+  width: 12px;
+}
+
+select::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* width: 8px; */
+  height: 10px;
+  background: #dadde1;
+}
+
+input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #101828;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 12px;
+
+  /* line-height: 16px; */
+  line-height: 1.33333;
+  color: #8d929a;
+}
+
+.img {
+  color: #101828;
+}

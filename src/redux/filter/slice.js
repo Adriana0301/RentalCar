@@ -1,14 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchFilteredCars } from "./operations";
 
-const carsSlice = createSlice({
-  name: "cars",
+const filterSlice = createSlice({
+  name: "filter",
   initialState: {
     cars: [],
     isLoading: false,
     error: null,
   },
-  reducers: {},
+  reducers: {
+    resetFilters(state) {
+      state.cars = [];
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchFilteredCars.pending, (state) => {
@@ -26,4 +30,5 @@ const carsSlice = createSlice({
   },
 });
 
-export default carsSlice.reducer;
+export const { resetFilters } = filterSlice.actions;
+export const filterReducer = filterSlice.reducer;
