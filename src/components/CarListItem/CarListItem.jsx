@@ -1,6 +1,10 @@
 import { forwardRef } from "react";
 import Button from "../Button/Button";
 import s from "./CarListItem.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavourite } from "../../redux/favourite/selectors";
+import { clickFavoriteCar } from "../../redux/favourite/slice";
+import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
 
 const CarListItem = forwardRef(({ car }, ref) => {
   const {
@@ -15,11 +19,28 @@ const CarListItem = forwardRef(({ car }, ref) => {
     rentalCompany,
     mileage,
   } = car;
+  const favorite = useSelector(selectFavourite);
+  const dispatch = useDispatch();
+  const handleIsFavorite = () => {
+    dispatch(clickFavoriteCar(car));
+  };
   return (
     <li className={s.listItem} ref={ref}>
       <div className={s.wrapper}>
-        <img src={img} alt="Car" className={s.listImage} />
-
+        <div className={s.wrapperAb}>
+          <img src={img} alt="Car" className={s.listImage} />
+          <button
+            type="button"
+            className={s.buttonFavourite}
+            onClick={handleIsFavorite}
+          >
+            {favorite.some((fav) => fav && fav.id === id) ? (
+              <IoMdHeart className={s.favoutite} />
+            ) : (
+              <IoMdHeartEmpty className={s.notFavotite} />
+            )}
+          </button>
+        </div>
         <div className={s.textWrapper}>
           <h2 className={s.listTitle}>
             {brand} <span className={s.listSpan}>{model}</span> {year}

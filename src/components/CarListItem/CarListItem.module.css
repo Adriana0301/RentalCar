@@ -58,3 +58,38 @@
   /* line-height: 20px; */
   line-height: 1.25;
 }
+
+.wrapperAb {
+  position: relative;
+}
+
+.buttonFavourite {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.buttonFavourite:hover,
+.buttonFavourite:active,
+.buttonFavourite:focus {
+  border: none; /* При бажанні: або зробити border повністю прозорим */
+  outline: none; /* Прибирає синю обводку браузера */
+  box-shadow: none; /* Якщо використовувався тіньовий ефект */
+  background-color: transparent;
+}
+
+.favoutite {
+  width: 20px;
+  height: 20px;
+  color: var(--button);
+}
+
+.notFavotite {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}

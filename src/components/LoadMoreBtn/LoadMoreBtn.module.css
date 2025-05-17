@@ -1,6 +1,6 @@
 .loadMoreBtn {
   display: block;
-  border: 1px solid #3470ff;
+  border: 1px solid var(--button);
   border-radius: 12px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -13,4 +13,8 @@
   color: #101828;
   background-color: transparent;
   /* margin-bottom: 124px; */
+}
+
+.loadMoreBtn {
+  border-color: var(--button-hover);
 }

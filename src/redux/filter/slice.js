@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchFilteredCars } from "./operations";
 
+const initialState = {
+  brand: "",
+  rentalPriceMax: "",
+  mileageFrom: "",
+  mileageTo: "",
+};
+
 const filterSlice = createSlice({
   name: "filter",
   initialState: {
@@ -9,8 +16,8 @@ const filterSlice = createSlice({
     error: null,
   },
   reducers: {
-    resetFilters(state) {
-      state.cars = [];
+    resetFilters() {
+      return initialState;
     },
   },
   extraReducers: (builder) => {
