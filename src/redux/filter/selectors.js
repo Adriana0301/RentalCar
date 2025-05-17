@@ -1,1 +1,1 @@
-export const selectAllCars = (state) => state.filter.cars || [];
+export const selectFilters = (state) => state.filters?.filters || {};

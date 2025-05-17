@@ -26,7 +26,13 @@
 
 .textarea {
   height: 88px;
-  resize: none; /* Забороняє зміну розміру */
+  resize: none;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #8d929a;
 }
 
 .input:focus {
