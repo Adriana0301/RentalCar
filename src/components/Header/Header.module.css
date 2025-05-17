@@ -1,0 +1,9 @@
+.header {
+  padding: 24px 120px;
+  border-bottom: 1px solid var(--badges);
+  background-color: var(--badges);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}

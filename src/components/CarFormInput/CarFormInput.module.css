@@ -1,0 +1,36 @@
+.input {
+  border-radius: 12px;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 576px;
+  background: #f7f7f7;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #8d929a;
+}
+
+.error {
+  font-weight: 200;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: red;
+  font-family: "Manrope", sans-serif;
+}
+
+.textarea {
+  height: 88px;
+  resize: none; /* Забороняє зміну розміру */
+}
+
+.input:focus {
+  border: none; /* При бажанні: або зробити border повністю прозорим */
+  outline: none; /* Прибирає синю обводку браузера */
+  box-shadow: none; /* Якщо використовувався тіньовий ефект */
+}

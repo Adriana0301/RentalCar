@@ -1,0 +1,16 @@
+.loadMoreBtn {
+  display: block;
+  border: 1px solid #3470ff;
+  border-radius: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 35px;
+  padding-right: 35px;
+  max-width: 156px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+  background-color: transparent;
+  /* margin-bottom: 124px; */
+}

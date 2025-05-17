@@ -1,0 +1,38 @@
+import { useSelector } from "react-redux";
+import { selectAllCars } from "../../redux/cars/selectors";
+import CarListItem from "../CarListItem/CarListItem";
+import s from "./CarList.module.css";
+import LoardMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
+import { useEffect, useRef } from "react";
+
+const CarList = () => {
+  const cars = useSelector(selectAllCars);
+  const firstCardRef = useRef(null);
+
+  useEffect(() => {
+    if (cars.length > 12) {
+      const { height } = firstCardRef.current.getBoundingClientRect();
+      window.scrollBy({
+        top: height * 2,
+        behavior: "smooth",
+      });
+    }
+  }, [cars]);
+
+  return (
+    <div className={s.wrapper}>
+      <ul className={s.carList}>
+        {cars.map((car, idx) => (
+          <CarListItem
+            key={`${car.id + idx}`}
+            car={car}
+            ref={idx === 0 ? firstCardRef : null}
+          />
+        ))}
+      </ul>
+      <LoardMoreBtn />
+    </div>
+  );
+};
+
+export default CarList;

@@ -1,0 +1,23 @@
+.button {
+  border-radius: 12px;
+  padding: 12px 97px;
+  display: inline-block;
+  max-width: 276px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* height: 44px; */
+  font-family: inherit;
+  background-color: var(--button);
+  font-weight: 600;
+  font-size: 16px;
+
+  /* line-height: 20px; */
+  line-height: 1.25;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
